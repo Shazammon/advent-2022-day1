@@ -24,7 +24,11 @@ let data = fs.readFileSync('data.txt', 'utf-8')
 // console.log(separateLines.length)
 const stringData = data.split(/\r?\n/)
 const numData = stringData.map(function(str) {
-    return parseInt(str)
+    if (str === '') {
+        return ''
+    } else {
+        return parseInt(str)
+    }
 })
 console.log(numData)
 // console.log(numData)
@@ -49,7 +53,7 @@ function highestCal() {
 
 }
 
-// highestCal()
+highestCal()
 // console.log(highest)
 
-console.log(numData[0] + numData[1])
+// console.log(numData[0] + numData[1])
