@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { parse } = require('path')
 // let datastring = ''
 
 // fileconverter = fs.readFile('data.js', (err, data) => {
@@ -21,19 +22,34 @@ let data = fs.readFileSync('data.txt', 'utf-8')
 
 // let separateLines = data.split(/[^\r\n]+/g);
 // console.log(separateLines.length)
-const numData = data.split(/\r?\n/)
+const stringData = data.split(/\r?\n/)
+const numData = stringData.map(function(str) {
+    return parseInt(str)
+})
+console.log(numData)
 // console.log(numData)
 // console.log(numData.length)
 
 function highestCal() {
     // console.log(numData.length)
-    let addition = 0
+    let current = 0
+    let highest = 1
     for (let i = 0; i < numData.length; i++) {
-        addition = i + addition
+        if (numData[i] === '') {
+            if (current > highest) {
+                highest = current
+            }
+            current = 0
+            console.log(highest)
+        } else {
+            current = current + numData[i]
+        }
     }
-    console.log(addition)
-    return addition
+    return highest
+
 }
 
-highestCal()
+// highestCal()
+// console.log(highest)
 
+console.log(numData[0] + numData[1])
