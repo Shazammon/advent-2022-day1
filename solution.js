@@ -44,7 +44,7 @@ function highestCal() {
                 highest = current
             }
             current = 0
-            console.log(highest)
+            // console.log(highest)
         } else {
             current = current + numData[i]
         }
@@ -53,7 +53,8 @@ function highestCal() {
 
 }
 
-highestCal()
+console.log(highestCal())
+
 // console.log(highest)
 
 // console.log(numData[0] + numData[1])
