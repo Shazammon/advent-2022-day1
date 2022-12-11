@@ -19,5 +19,21 @@ let data = fs.readFileSync('data.txt', 'utf-8')
 
 // console.log(typeof(data))
 
-let separateLines = data.split(/[^\r\n]+/g);
-console.log(separateLines.length)
+// let separateLines = data.split(/[^\r\n]+/g);
+// console.log(separateLines.length)
+const numData = data.split(/\r?\n/)
+// console.log(numData)
+// console.log(numData.length)
+
+function highestCal() {
+    // console.log(numData.length)
+    let addition = 0
+    for (let i = 0; i < numData.length; i++) {
+        addition = i + addition
+    }
+    console.log(addition)
+    return addition
+}
+
+highestCal()
+
