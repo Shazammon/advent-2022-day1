@@ -16,3 +16,8 @@ const fs = require('fs')
 
 let data = fs.readFileSync('data.txt', 'utf-8')
 // console.log(data)
+
+// console.log(typeof(data))
+
+let separateLines = data.split(/[^\r\n]+/g);
+console.log(separateLines.length)
