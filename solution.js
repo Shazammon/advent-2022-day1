@@ -45,6 +45,6 @@ function highestCal() {
 
 console.log(highestCal())
 
-// console.log(threeHighestTotal)
+console.log(threeHighestTotal)
 
-// console.log(numData[0] + numData[1])
+
