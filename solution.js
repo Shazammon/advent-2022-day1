@@ -19,11 +19,18 @@ console.log(numData)
 function highestCal() {
     // console.log(numData.length)
     let current = 0
-    let highest = 1
+    let highest = 3
+    let secondhighest = 2
+    let thirdhighest = 1
+    let threeHighestTotal = 0
     for (let i = 0; i < numData.length; i++) {
         if (numData[i] === '') {
             if (current > highest) {
                 highest = current
+            } else if (current > secondhighest) {
+                secondhighest = current
+            } else if (current > thirdhighest) {
+                thirdhighest = current
             }
             current = 0
             // console.log(highest)
@@ -31,7 +38,8 @@ function highestCal() {
             current = current + numData[i]
         }
     }
-    return highest
+    threeHighestTotal = highest + secondhighest + thirdhighest
+    return 
 
 }
 
