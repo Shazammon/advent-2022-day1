@@ -38,7 +38,7 @@ function highestCal() {
             current = current + numData[i]
         }
     }
-    threeHighestTotal = highest + secondhighest + thirdhighest
+    threeHighestTotal = highest + secondhighest
     return 
 
 }
